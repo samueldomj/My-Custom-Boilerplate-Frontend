@@ -1,0 +1,7 @@
+extends ../config/template
+append config
+    - pageTitle = ''
+    - pageDescription = ''
+    - pageKeywords = ''
+    - pageImage = ''
+    - pageUrl = '' 

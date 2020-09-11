@@ -1,0 +1,30 @@
+/* ------------------------------------- */
+/* Buttons */
+/* ------------------------------------- */
+.button {
+    display: inline-block;
+    padding: 0.75em 1.4375em;
+    @include font-family(body);
+    @include font-weight(semibold);
+    @include font-size(text-small);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &--primary {
+        background-color: color(clr-primary);
+        color: color(clr-white);
+        border: none;
+
+        &:hover {
+            background-color: #a32a21;
+        }
+    }
+}

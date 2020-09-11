@@ -1,0 +1,29 @@
+// -------------------------------------
+// Fonts 
+// -------------------------------------
+@function get-font-family($type) {
+    @return unquote(map-get($font__family, $type));
+}
+
+@function get-font-size($type) {
+    @return nth(map-get($font__size, $type), 1);
+}
+
+@function get-line-height($type) {
+    @return nth(map-get($font__size, $type), 2);
+}
+
+@function get-font-weight($type) {
+    @return map-get($font__weight, $type);
+}
+
+// -------------------------------------
+// Layer z-index 
+// -------------------------------------
+@function get-z-index($type) {
+    @return map-get($z-index, $type);
+}
+
+@function color($type) {
+    @return map-get($colors, $type);
+}

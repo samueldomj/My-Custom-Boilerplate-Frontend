@@ -1,6 +1,7 @@
 import gulp from 'gulp'
 import plumber from 'gulp-plumber'
 import browserSync from 'browser-sync'
+import pug from 'gulp-pug'
 import sass from 'gulp-sass'
 import postcss from 'gulp-postcss'
 import cssnano from 'cssnano'
@@ -22,6 +23,16 @@ gulp.task('styles', () => {
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(gulp.dest('./public/css'))
         .pipe(server.stream())
+})
+
+// Pug
+gulp.task('pug', () => {
+    return gulp.src('./src/pug/pages/*.pug')
+        .pipe(pug({
+            pretty: true,
+            basedir: './src/pug'
+        }))
+        .pipe(gulp.dest('./public'))
 })
 
 // Js
@@ -52,7 +63,7 @@ gulp.task('default', () => {
     })
 
     // HTML
-    gulp.watch('./public/*.html').on('change', server.reload)
+    gulp.watch('./src/pug/**/*.pug', gulp.series('pug')).on('change', server.reload)
 
     // Scss
     gulp.watch('./src/scss/**/*.scss', gulp.series('styles'))

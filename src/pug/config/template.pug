@@ -1,0 +1,30 @@
+block config
+    include variables
+
+<!DOCTYPE html>
+html(lang="es")
+    head
+        title= `${pageTitle} | ${siteName}`
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        //- Metadata
+        meta(name="description", content= pageDescription)
+        meta(name="keywords", content= pageKeywords)
+        meta(property="og:title" content= pageTitle)
+        meta(property="og:description" content= pageDescriptionSeo)
+        meta(property="og:image" content= pageImages)
+        meta(property="og:url" content= pageUrl)
+        link(rel="shortcut icon", href="favicon.png")
+
+        //- Fonts
+        link(href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap", rel="stylesheet")
+
+        //- Custom styles
+        link(rel="stylesheet", href="css/style.css")
+    body    
+
+        block content
+            //- Contenido principal
+
+        script(src="js/main.js")

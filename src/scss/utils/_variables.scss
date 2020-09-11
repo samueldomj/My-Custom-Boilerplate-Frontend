@@ -1,0 +1,60 @@
+// -------------------------------------
+// Colors
+// -------------------------------------
+$colors: (
+    clr-primary:   #ff3029,
+    clr-secondary: #6d7278,
+    clr-white:     #ffffff,
+    clr-light:     #f4f2f2,
+    clr-dark:      #2a2a2a
+);
+
+// -------------------------------------
+// Font family
+// -------------------------------------
+$font__family: (
+    heading: '"Bebas Neue", cursive',
+    body:    '"Montserrat", sans-serif'
+);
+
+$font__size: (
+    heading-1:   63px 73px,
+    heading-2:   45px 55px,
+    heading-3:   31px 41px,
+    heading-4:   22px 32px,
+    text-large:  18px 28px,
+    text-normal: 16px 26px,
+    text-small:  15px 25px,
+    caption:     13px 23px
+);
+
+$font__weight: (
+    light:    300,
+    regular:  400,
+    medium:   500,
+    semibold: 600,
+    bold:     700
+);
+
+// -------------------------------------
+// Breakpoints 
+// -------------------------------------
+$breakpoints: (
+    small:   576px,
+    medium:  768px,
+    large:   992px,
+    x-large: 1200px
+);
+
+// -------------------------------------
+// Z-index  
+// -------------------------------------
+$z-index: (
+    z-back:   -10,
+    z-normal:  1,
+    z-tooltip: 10,
+    z-fixed:   100,
+    z-modal:   1000
+);
+
+
